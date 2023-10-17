@@ -29,7 +29,7 @@ jobs:
             -   name: Build and run containers
                 run: |
                     docker-compose up composer
-                    docker-compose up php mysql --detach --wait --wait-timeout 30
+                    docker-compose up --detach php db
                     docker compose exec php composer install --optimize-autoloader --ignore-platform-reqs
                     docker-compose exec php vendor/bin/codecept build --quiet
                 working-directory: ./  # Change this to your project's directory
