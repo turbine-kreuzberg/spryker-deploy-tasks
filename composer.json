@@ -51,7 +51,7 @@
         }
     },
     "scripts": {
-        "tests": "vendor/bin/codecept run",
+        "tests": "vendor/bin/codecept run -g DeployTasksGeneratorTest && vendor/bin/codecept run",
         "tests-coverage": "vendor/bin/phpunit --colors=always -c tests/phpunit.xml --coverage-text --coverage-html=tests/_output",
         "phpstan": "vendor/bin/phpstan analyse",
         "cs-check": "vendor/bin/phpcs -ps --standard=./config/codesniffer_ruleset.xml src/ tests/",
