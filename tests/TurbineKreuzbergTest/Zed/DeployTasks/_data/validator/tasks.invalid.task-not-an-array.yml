@@ -1,0 +1,30 @@
+tasks:
+  - command: "some/command/to/execute"
+    execute_for_store:
+      - DE
+      - EN
+    execute_on:
+      - dev
+      - int
+      - stage
+      - prod
+  - command: "some/other/command/to/execute/everywhere/but/production"
+    execute_for_store:
+      - DE
+      - EN
+    execute_on:
+      - dev
+      - int
+      - stage
+  - command: "yet/another/command/to/execute"
+    description: "description for yet another command to execute"
+    execute_for_store:
+      - DE
+      - EN
+    execute_on:
+      - dev
+      - int
+      - stage
+      - prod
+  # commands have to be either a single string or an array with at least the key 'command'
+  - 1234

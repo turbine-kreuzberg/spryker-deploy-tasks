@@ -1,0 +1,10 @@
+.idea/
+vendor/
+src/Generated
+src/Orm
+tests/data
+tests/src/Generated
+tests/src/Orm
+tests/**/_generated/*
+.phpunit.result.cache
+.phpunit.cache

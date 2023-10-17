@@ -1,0 +1,35 @@
+parameters:
+    level: 8
+    paths:
+        - src/
+        - tests/
+
+    bootstrapFiles:
+        - '%rootDir%/../../../phpstan-bootstrap.php'
+
+    excludePaths:
+        - '%rootDir%/../../../src/Generated/*'
+        - '%rootDir%/../../../src/Orm/*'
+        - '%rootDir%/../../../tests/_data/*'
+        - '%rootDir%/../../../tests/_output/*'
+        - '%rootDir%/../../../tests/_support/*'
+        - '%rootDir%/../../../tests/data/*'
+        - '%rootDir%/../../../tests/src/Generated/*'
+        - '%rootDir%/../../../tests/src/Orm/*'
+        - '%rootDir%/../../../tests/TurbineKreuzbergTest/Zed/DeployTasks/_data/*'
+        - '%rootDir%/../../../tests/TurbineKreuzbergTest/Zed/DeployTasks/_output/*'
+        - '%rootDir%/../../../tests/TurbineKreuzbergTest/Zed/DeployTasks/_support/_generated/*'
+
+    checkMissingIterableValueType: false
+
+    reportUnmatchedIgnoredErrors: false
+
+    ignoreErrors:
+        - '#PHPUnit\\Framework\\TestCase::expectException\(\) expects class-string<Throwable>, string given#'
+        # ignore errors based on generated entity classes
+        - '#^Instantiated class Orm\\Zed\\DeployTasks\\Persistence\\.* not found#'
+        - '#^Call to .*method .*\(\) on an unknown class Orm\\Zed\\DeployTasks\\Persistence\\#'
+        - '#^Property .* has unknown class Orm\\Zed\\DeployTasks\\Persistence\\#'
+        - '#^Method .* has invalid return type Orm\\Zed\\DeployTasks\\Persistence\\#'
+        - '#^Parameter .* of method .* has invalid type Orm\\Zed\\DeployTasks\\Persistence\\#'
+        - '#^Access to constant .* on an unknown class Orm\\Zed\\DeployTasks\\Persistence\\#'

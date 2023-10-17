@@ -1,0 +1,81 @@
+stages:
+  - tests
+  - build
+  - badges
+
+include:
+  - template: Composer.gitlab-ci.yml
+
+.template-qa-step:
+  stage: tests
+  image: composer:latest
+  timeout: 5m
+  variables:
+    QA_TOOL: ${CI_JOB_NAME}
+    STATUS: 0
+  before_script:
+    - composer install -o --ignore-platform-reqs
+    - echo "QA_TOOL_STATUS=failed" > ${QA_TOOL}.env
+  after_script:
+    - if [[ -f SUCCESS ]]; then echo "QA_TOOL_STATUS=success" > ${QA_TOOL}.env; fi
+  artifacts:
+    reports:
+      dotenv: ${QA_TOOL}.env
+    when: always
+    expire_in: 1 day
+
+phpstan:
+  extends: .template-qa-step
+  script:
+    - vendor/bin/codecept build --quiet
+    - composer phpstan
+    - touch SUCCESS
+
+code-sniffer:
+  extends: .template-qa-step
+  script:
+    - vendor/bin/codecept build --quiet
+    - composer cs-check
+    - touch SUCCESS
+
+tests:
+  stage: tests
+  image: docker/compose:latest
+  services:
+    - docker:dind
+  script:
+    - docker-compose up -d
+    - docker-compose exec -T php composer tests
+    - docker-compose down
+
+.template-create-badge:
+  stage: badges
+  image: python:3-alpine
+  variables:
+    COLOR: green
+  before_script:
+    - pip install anybadge
+  script:
+    - anybadge -l ${QA_TOOL} -v ${QA_TOOL_STATUS} -c ${COLOR} -f ${QA_TOOL}.svg
+  artifacts:
+    paths:
+      - ${QA_TOOL}.svg
+    when: always
+    expire_in: 4 weeks
+  when: always
+  only:
+    - main
+
+badge_phpstan:
+  extends: .template-create-badge
+  variables:
+    QA_TOOL: phpstan
+  dependencies:
+    - phpstan
+
+badge_codesniffer:
+  extends: .template-create-badge
+  variables:
+    QA_TOOL: code-sniffer
+  dependencies:
+    - code-sniffer

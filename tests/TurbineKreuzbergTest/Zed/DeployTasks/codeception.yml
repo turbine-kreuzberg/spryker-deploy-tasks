@@ -1,0 +1,22 @@
+namespace: TurbineKreuzbergTest\Zed\DeployTasks
+
+paths:
+  tests: .
+  data: _data
+  support: _support
+  output: _output
+
+bootstrap: bootstrap.php
+
+suites:
+  Business:
+    path: Business
+    actor: DeployTasksBusinessTester
+    modules:
+      enabled:
+        - \SprykerTest\Client\Testify\Helper\ConfigHelper
+        - TurbineKreuzbergTest\Zed\DeployTasks\Helper\DeployTasksDataHelper
+        - \SprykerTest\Shared\Testify\Helper\DataCleanupHelper
+        - \SprykerTest\Shared\Propel\Helper\TransactionHelper
+        - TurbineKreuzbergTest\Zed\DeployTasks\Helper\PropelInstallHelper:
+            enabled: true

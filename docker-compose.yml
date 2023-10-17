@@ -1,0 +1,29 @@
+version: '3'
+services:
+  php:
+    image: spryker/php:8.1
+    working_dir: /data
+    volumes:
+      - ./:/data
+    command: sleep infinity
+    tty: true
+    stdin_open: true
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  composer:
+    image: composer:latest
+    command: install --optimize-autoloader --ignore-platform-reqs
+    volumes:
+      - .:/app:delegated
+  db:
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: test
+      MYSQL_USER: test
+      MYSQL_PASSWORD: test
+    ports:
+      - "3306:3306"

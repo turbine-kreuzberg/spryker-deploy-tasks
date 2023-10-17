@@ -1,0 +1,31 @@
+tasks:
+  # task has to be an item with the mandatory keys 'command' and 'execute_on'
+  # - the value for 'command' should be an executable shell command
+  # - the entries for 'execute_on' have to match the env var APPLICATION_ENV
+  - command: "some/command/to/execute"
+    execute_for_store:
+      - DE
+      - EN
+    execute_on:
+      - dev
+      - int
+      - stage
+      - prod
+  # to skip executing a task in a particular environment, it needs to be
+  # removed from the 'execute_on' list
+  - command: "some/other/command/to/execute/everywhere/but/production"
+    execute_for_store:
+      - DE
+      - EN
+    execute_on:
+      - dev
+      - int
+      - stage
+  # task can have additional optional keys, e.g. 'description'
+  - command: "yet/another/command/to/execute"
+    description: "description for yet another command to execute"
+    execute_for_store:
+      - DE
+      - EN
+    execute_on:
+      - dev

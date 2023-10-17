@@ -1,0 +1,60 @@
+{
+    "name": "turbine-kreuzberg/spryker-deploy-tasks",
+    "type": "library",
+    "license": "MIT",
+    "description": "Deploy tasks for Spryker to execute once after deployment based on the environment and store",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "authors": [
+        {
+            "name": "Bernd Alter",
+            "email": "bernd.alter@turbinekreuzberg.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "TurbineKreuzberg\\": "src/TurbineKreuzberg/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TurbineKreuzbergTest\\": "tests/TurbineKreuzbergTest/",
+            "Generated\\": "tests/src/Generated/",
+            "Orm\\": "tests/src/Orm/",
+            "Pyz\\": "tests/src/Pyz/"
+        },
+        "files": [
+            "test-autoload.php"
+        ]
+    },
+    "require": {
+        "php": ">=8.1",
+        "spryker/console": "^4.10",
+        "spryker/kernel": "^3.54.0",
+        "spryker/propel-orm": "^1.14"
+    },
+    "require-dev": {
+        "codeception/module-asserts": "*",
+        "codeception/module-db": "*",
+        "codeception/module-phpbrowser": "*",
+        "fond-of-codeception/spryker": "*",
+        "phpstan/phpstan": "*",
+        "spryker/code-sniffer": "*",
+        "spryker/container": "*",
+        "spryker/propel": "*",
+        "spryker/testify": "*"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "scripts": {
+        "tests": "vendor/bin/codecept run",
+        "tests-coverage": "vendor/bin/phpunit --colors=always -c tests/phpunit.xml --coverage-text --coverage-html=tests/_output",
+        "phpstan": "vendor/bin/phpstan analyse",
+        "cs-check": "vendor/bin/phpcs -ps --standard=./config/codesniffer_ruleset.xml src/ tests/",
+        "cs-fix": "vendor/bin/phpcbf  -p  --standard=./config/codesniffer_ruleset.xml src/ tests/"
+    }
+}

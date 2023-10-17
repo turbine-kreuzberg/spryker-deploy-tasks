@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd"
+          namespace="Orm\Zed\DeployTasks\Persistence"
+          package="src.Orm.Zed.DeployTasks.Persistence">
+
+    <table name="txb_deploy_tasks" identifierQuoting="true">
+        <column name="version" required="true" type="INTEGER" default="0"/>
+        <behavior name="timestampable">
+            <parameter name="disable_updated_at" value="true"/>
+        </behavior>
+
+        <unique name="txb_deploy_tasks-version">
+            <unique-column name="version"/>
+        </unique>
+    </table>
+
+</database>

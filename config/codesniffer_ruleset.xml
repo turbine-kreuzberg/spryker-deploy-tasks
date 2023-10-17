@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<ruleset name="Turbine workflow">
+    <description>
+        Turbine workflow coding standard
+    </description>
+
+    <exclude-pattern>*/src/Generated/*</exclude-pattern>
+    <exclude-pattern>*/src/Orm/*/Base/</exclude-pattern>
+    <exclude-pattern>*/src/Orm/*/Map/</exclude-pattern>
+    <exclude-pattern>*/src/Orm/Propel/</exclude-pattern>
+    <exclude-pattern>*/_generated/*</exclude-pattern>
+    <exclude-pattern>*/tests/_data/*</exclude-pattern>
+    <exclude-pattern>*/tests/_output/*</exclude-pattern>
+    <exclude-pattern>*/tests/_support/*</exclude-pattern>
+    <exclude-pattern>*/tests/data/*</exclude-pattern>
+    <exclude-pattern>*/tests/config/config_propel.php</exclude-pattern>
+    <exclude-pattern>*/tests/src/Generated/*</exclude-pattern>
+    <exclude-pattern>*/tests/src/Orm/*</exclude-pattern>
+
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="120"/>
+            <property name="absoluteLineLimit" value="120"/>
+        </properties>
+    </rule>
+
+    <rule ref="vendor/spryker/code-sniffer/Spryker/ruleset.xml">
+    </rule>
+
+</ruleset>

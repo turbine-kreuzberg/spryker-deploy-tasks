@@ -1,0 +1,29 @@
+tasks:
+  - command: "some/command/to/execute"
+    execute_for_store:
+      - DE
+      - EN
+    execute_on:
+      - dev
+      - int
+      - stage
+      - prod
+  - command: "some/other/command/to/execute/everywhere/but/production"
+    execute_for_store:
+      - DE
+      - EN
+    execute_on:
+      - dev
+      - int
+      - stage
+  # command is not a string
+  - command: 1234
+    description: "description for yet another command to execute"
+    execute_for_store:
+      - DE
+      - EN
+    execute_on:
+      - dev
+      - int
+      - stage
+      - prod

@@ -1,0 +1,26 @@
+tasks:
+  - command: "some/command/to/execute"
+    execute_for_store:
+      - DE
+      - EN
+    execute_on:
+      - dev
+      - int
+      - stage
+      - prod
+  - command: "some/other/command/to/execute/everywhere/but/production"
+    execute_for_store:
+      - DE
+      - EN
+    execute_on:
+      - dev
+      - int
+      - stage
+  # missing 'execute_for_store' key
+  - command: "yet/another/command/to/execute"
+    description: "description for yet another command to execute"
+    execute_on:
+      - dev
+      - int
+      - stage
+      - prod
