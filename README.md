@@ -14,6 +14,41 @@ This package provides a functionality for Spryker to execute one-time tasks afte
 composer require [--dev] turbine-kreuzberg/spryker-deploy-tasks
 ```
 
+## Setup
+
+To use the provided console commands you will need to register the namespace `TurbineKreuzberg` in `config/Shared/config_default.php`.
+
+```php
+
+$config[KernelConstants::CORE_NAMESPACES] = [
+    // add 'TurbineKreuzberg' as a core namespace
+    'TurbineKreuzberg',
+];
+```
+
+In `src/Pyz/Zed/Console/ConsoleDependencyProvider.php` you need to register the console command plugin for deploy tasks.
+
+```php
+use TurbineKreuzberg\Zed\DeployTasks\Communication\Console\DeployTasksCreateConsole;
+use TurbineKreuzberg\Zed\DeployTasks\Communication\Console\DeployTasksExecuteConsole;
+
+    protected function getConsoleCommands(Container $container): array
+    {
+        $commands = [
+            // other registered console plugins ...
+
+            new DeployTasksCreateConsole(),
+            new DeployTasksExecuteConsole(),
+        ];
+```
+
+Then you should see a new section `deploy` in the console command list:
+```text
+ deploy
+  deploy:tasks:create   Generate new yml file for deploy tasks
+  deploy:tasks:execute  Execute all deploy tasks
+```
+
 ## Usage
 
 ### Create new deploy task file
@@ -74,6 +109,10 @@ tasks:
   - prd
 ```
 
+You have to define explicitly for which stores and environments the task should be executed.  
+There is no 'all environments' or 'all stores' option. This should prevent accidental execution of tasks in 
+environments or stores where they should not be executed.
+
 ### Execute deploy tasks
 
 ```php
@@ -81,7 +120,8 @@ vendor/bin/console deploy:tasks:execute
 ```
 
 This command will execute deploy tasks from all YAML files that have not been executed for the current environment and store yet.
-Executed tasks will be logged in a new table `txb_deploy_tasks` in the database. The mechanism is very much the same as for Propel migrations.
+Executed tasks will be logged in a new table `txb_deploy_tasks` in the database. 
+The mechanism is very much the same as for Propel migrations.
 
 ## Credits
 
