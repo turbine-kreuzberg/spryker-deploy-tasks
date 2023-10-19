@@ -44,7 +44,8 @@ tests:
   services:
     - docker:dind
   script:
-    - docker-compose up --detach --wait --wait-timeout 30
+    - docker-compose up composer
+    - docker-compose up --detach php db
     - docker-compose exec -T php composer tests
     - docker-compose down
 
