@@ -3050,20 +3050,20 @@
         },
         {
             "name": "spryker/propel-orm",
-            "version": "1.19.0",
+            "version": "1.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/propel-orm.git",
-                "reference": "aeb6819ff5fc80fb6d6447c9abc7f11c911eb1d8"
+                "reference": "e372e740ce43bc8a7fce52931d064ce60fc54157"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/propel-orm/zipball/aeb6819ff5fc80fb6d6447c9abc7f11c911eb1d8",
-                "reference": "aeb6819ff5fc80fb6d6447c9abc7f11c911eb1d8",
+                "url": "https://api.github.com/repos/spryker/propel-orm/zipball/e372e740ce43bc8a7fce52931d064ce60fc54157",
+                "reference": "e372e740ce43bc8a7fce52931d064ce60fc54157",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0",
+                "php": ">=8.1",
                 "propel/propel": "2.0.0-beta3",
                 "spryker/config": "^3.0.0",
                 "spryker/error-handler": "^2.0.0",
@@ -3084,6 +3084,7 @@
             },
             "autoload": {
                 "psr-4": {
+                    "Propel\\": "src/Spryker/Zed/PropelOrm/Business/Polyfill/",
                     "Spryker\\": "src/Spryker/",
                     "SprykerTest\\Shared\\PropelOrm\\Helper\\": "tests/SprykerTest/Shared/PropelOrm/_support/Helper/"
                 }
@@ -3094,9 +3095,9 @@
             ],
             "description": "PropelOrm module",
             "support": {
-                "source": "https://github.com/spryker/propel-orm/tree/1.19.0"
+                "source": "https://github.com/spryker/propel-orm/tree/1.20.0"
             },
-            "time": "2023-04-18T11:16:52+00:00"
+            "time": "2024-01-15T11:37:17+00:00"
         },
         {
             "name": "spryker/propel-orm-extension",
@@ -3141,16 +3142,16 @@
         },
         {
             "name": "spryker/queue",
-            "version": "1.10.1",
+            "version": "1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/queue.git",
-                "reference": "90b358f181740d04ce032932fcee50d1a5a53832"
+                "reference": "010790c9c3effd504c929df2d3fca6d3195717b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/queue/zipball/90b358f181740d04ce032932fcee50d1a5a53832",
-                "reference": "90b358f181740d04ce032932fcee50d1a5a53832",
+                "url": "https://api.github.com/repos/spryker/queue/zipball/010790c9c3effd504c929df2d3fca6d3195717b5",
+                "reference": "010790c9c3effd504c929df2d3fca6d3195717b5",
                 "shasum": ""
             },
             "require": {
@@ -3192,9 +3193,9 @@
             ],
             "description": "Queue module",
             "support": {
-                "source": "https://github.com/spryker/queue/tree/1.10.1"
+                "source": "https://github.com/spryker/queue/tree/1.11.0"
             },
-            "time": "2024-07-23T11:40:46+00:00"
+            "time": "2024-08-23T11:00:47+00:00"
         },
         {
             "name": "spryker/quote-extension",
