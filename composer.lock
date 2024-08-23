@@ -2364,21 +2364,21 @@
         },
         {
             "name": "spryker/kernel",
-            "version": "3.73.0",
+            "version": "3.74.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/kernel.git",
-                "reference": "9f22c67cf2b53eb5a8f201a0742317eeadc33c60"
+                "reference": "b9ef2180836f2767807c8ef2a422056b02b835bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/kernel/zipball/9f22c67cf2b53eb5a8f201a0742317eeadc33c60",
-                "reference": "9f22c67cf2b53eb5a8f201a0742317eeadc33c60",
+                "url": "https://api.github.com/repos/spryker/kernel/zipball/b9ef2180836f2767807c8ef2a422056b02b835bd",
+                "reference": "b9ef2180836f2767807c8ef2a422056b02b835bd",
                 "shasum": ""
             },
             "require": {
                 "everon/collection": "^1.0.0",
-                "php": ">=8.0",
+                "php": ">=8.1",
                 "spryker/config": "^3.5.0",
                 "spryker/container": "^1.1.0",
                 "spryker/error-handler": "^2.2.0",
@@ -2419,9 +2419,9 @@
             ],
             "description": "Kernel module",
             "support": {
-                "source": "https://github.com/spryker/kernel/tree/3.73.0"
+                "source": "https://github.com/spryker/kernel/tree/3.74.5"
             },
-            "time": "2023-06-13T10:42:20+00:00"
+            "time": "2024-07-22T13:19:26+00:00"
         },
         {
             "name": "spryker/laminas",
@@ -3141,16 +3141,16 @@
         },
         {
             "name": "spryker/queue",
-            "version": "1.10.1",
+            "version": "1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/queue.git",
-                "reference": "90b358f181740d04ce032932fcee50d1a5a53832"
+                "reference": "010790c9c3effd504c929df2d3fca6d3195717b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/queue/zipball/90b358f181740d04ce032932fcee50d1a5a53832",
-                "reference": "90b358f181740d04ce032932fcee50d1a5a53832",
+                "url": "https://api.github.com/repos/spryker/queue/zipball/010790c9c3effd504c929df2d3fca6d3195717b5",
+                "reference": "010790c9c3effd504c929df2d3fca6d3195717b5",
                 "shasum": ""
             },
             "require": {
@@ -3192,9 +3192,9 @@
             ],
             "description": "Queue module",
             "support": {
-                "source": "https://github.com/spryker/queue/tree/1.10.1"
+                "source": "https://github.com/spryker/queue/tree/1.11.0"
             },
-            "time": "2024-07-23T11:40:46+00:00"
+            "time": "2024-08-23T11:00:47+00:00"
         },
         {
             "name": "spryker/quote-extension",
