@@ -9848,16 +9848,16 @@
         },
         {
             "name": "fakerphp/faker",
-            "version": "v1.23.0",
+            "version": "v1.23.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FakerPHP/Faker.git",
-                "reference": "e3daa170d00fde61ea7719ef47bb09bb8f1d9b01"
+                "reference": "bfb4fe148adbf78eff521199619b93a52ae3554b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/e3daa170d00fde61ea7719ef47bb09bb8f1d9b01",
-                "reference": "e3daa170d00fde61ea7719ef47bb09bb8f1d9b01",
+                "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/bfb4fe148adbf78eff521199619b93a52ae3554b",
+                "reference": "bfb4fe148adbf78eff521199619b93a52ae3554b",
                 "shasum": ""
             },
             "require": {
@@ -9883,11 +9883,6 @@
                 "ext-mbstring": "Required for multibyte Unicode string functionality."
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-main": "v1.21-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Faker\\": "src/Faker/"
@@ -9910,9 +9905,9 @@
             ],
             "support": {
                 "issues": "https://github.com/FakerPHP/Faker/issues",
-                "source": "https://github.com/FakerPHP/Faker/tree/v1.23.0"
+                "source": "https://github.com/FakerPHP/Faker/tree/v1.23.1"
             },
-            "time": "2023-06-12T08:44:38+00:00"
+            "time": "2024-01-02T13:46:09+00:00"
         },
         {
             "name": "fond-of-codeception/spryker",
@@ -13866,16 +13861,16 @@
         },
         {
             "name": "spryker/testify",
-            "version": "3.50.0",
+            "version": "3.55.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/testify.git",
-                "reference": "b14eb30fc58a987d3e600cf0af604478e7c1ecb1"
+                "reference": "6bf82952120e96182f51588905fbb3fb0fd05f07"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/testify/zipball/b14eb30fc58a987d3e600cf0af604478e7c1ecb1",
-                "reference": "b14eb30fc58a987d3e600cf0af604478e7c1ecb1",
+                "url": "https://api.github.com/repos/spryker/testify/zipball/6bf82952120e96182f51588905fbb3fb0fd05f07",
+                "reference": "6bf82952120e96182f51588905fbb3fb0fd05f07",
                 "shasum": ""
             },
             "require": {
@@ -13883,7 +13878,7 @@
                 "dms/phpunit-arraysubset-asserts": "^0.4.0",
                 "fakerphp/faker": "^1.16.0",
                 "mikey179/vfsstream": "^1.6.7",
-                "php": ">=8.0",
+                "php": ">=8.1",
                 "spryker/application": "^3.12.0",
                 "spryker/application-extension": "^1.0.0",
                 "spryker/config": "^3.5.0",
@@ -13904,7 +13899,8 @@
                 "spryker/json-schema": "^1.0.0",
                 "spryker/propel-orm": "*",
                 "spryker/silex": "*",
-                "spryker/twig": "^3.0.0"
+                "spryker/twig": "^3.0.0",
+                "symfony/dom-crawler": "*"
             },
             "suggest": {
                 "spryker/silex": "Add this when you still want to use the abandoned Silex."
@@ -13937,9 +13933,9 @@
             ],
             "description": "Testify module",
             "support": {
-                "source": "https://github.com/spryker/testify/tree/3.50.0"
+                "source": "https://github.com/spryker/testify/tree/3.55.3"
             },
-            "time": "2023-09-18T09:59:00+00:00"
+            "time": "2024-07-25T10:16:14+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
