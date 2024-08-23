@@ -17,7 +17,7 @@ services:
     volumes:
       - .:/app:delegated
   db:
-    image: mysql:8.0
+    image: mysql:8.4
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     environment:
