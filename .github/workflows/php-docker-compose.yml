@@ -5,9 +5,7 @@ on:
         branches:
             - main  # Change this to your main branch name
     pull_request:
-        types:
-            - opened
-            - reopened
+
 jobs:
     ci:
         runs-on: ubuntu-latest
