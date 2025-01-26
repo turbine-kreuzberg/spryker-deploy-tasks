@@ -2361,16 +2361,16 @@
         },
         {
             "name": "spryker/kernel",
-            "version": "3.75.1",
+            "version": "3.76.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/kernel.git",
-                "reference": "55cf23f44b06fd3ae9394cd93bd57a8f29153078"
+                "reference": "0467b85ad410df4f21db752cccca92ebc2a3635e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/kernel/zipball/55cf23f44b06fd3ae9394cd93bd57a8f29153078",
-                "reference": "55cf23f44b06fd3ae9394cd93bd57a8f29153078",
+                "url": "https://api.github.com/repos/spryker/kernel/zipball/0467b85ad410df4f21db752cccca92ebc2a3635e",
+                "reference": "0467b85ad410df4f21db752cccca92ebc2a3635e",
                 "shasum": ""
             },
             "require": {
@@ -2416,9 +2416,9 @@
             ],
             "description": "Kernel module",
             "support": {
-                "source": "https://github.com/spryker/kernel/tree/3.75.1"
+                "source": "https://github.com/spryker/kernel/tree/3.76.0"
             },
-            "time": "2024-12-12T16:04:55+00:00"
+            "time": "2025-01-24T10:25:16+00:00"
         },
         {
             "name": "spryker/laminas",
@@ -3712,16 +3712,16 @@
         },
         {
             "name": "spryker/twig",
-            "version": "3.26.0",
+            "version": "3.27.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/twig.git",
-                "reference": "3fbfeb4b5a38bbdfe9fb3ed235a0462e7807ea40"
+                "reference": "bf450c6e46dc67ce53a98c83ec1dea138397091c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/twig/zipball/3fbfeb4b5a38bbdfe9fb3ed235a0462e7807ea40",
-                "reference": "3fbfeb4b5a38bbdfe9fb3ed235a0462e7807ea40",
+                "url": "https://api.github.com/repos/spryker/twig/zipball/bf450c6e46dc67ce53a98c83ec1dea138397091c",
+                "reference": "bf450c6e46dc67ce53a98c83ec1dea138397091c",
                 "shasum": ""
             },
             "require": {
@@ -3767,9 +3767,9 @@
             ],
             "description": "Twig module",
             "support": {
-                "source": "https://github.com/spryker/twig/tree/3.26.0"
+                "source": "https://github.com/spryker/twig/tree/3.27.0"
             },
-            "time": "2025-01-07T16:05:54+00:00"
+            "time": "2025-01-23T10:38:31+00:00"
         },
         {
             "name": "spryker/twig-extension",
