@@ -12974,16 +12974,16 @@
         },
         {
             "name": "spryker/code-sniffer",
-            "version": "0.17.26",
+            "version": "0.17.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/code-sniffer.git",
-                "reference": "be31dad00da0af2417a775b1d545c87cb058f2e8"
+                "reference": "3ed9c1a30d6d856c60a19e74fab92bf166759c8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/code-sniffer/zipball/be31dad00da0af2417a775b1d545c87cb058f2e8",
-                "reference": "be31dad00da0af2417a775b1d545c87cb058f2e8",
+                "url": "https://api.github.com/repos/spryker/code-sniffer/zipball/3ed9c1a30d6d856c60a19e74fab92bf166759c8f",
+                "reference": "3ed9c1a30d6d856c60a19e74fab92bf166759c8f",
                 "shasum": ""
             },
             "require": {
@@ -13028,7 +13028,7 @@
                 "issues": "https://github.com/spryker/code-sniffer/issues",
                 "source": "https://github.com/spryker/code-sniffer"
             },
-            "time": "2025-01-03T17:43:12+00:00"
+            "time": "2025-02-05T13:04:38+00:00"
         },
         {
             "name": "spryker/currency",
@@ -14058,16 +14058,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.11.2",
+            "version": "3.11.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPCSStandards/PHP_CodeSniffer.git",
-                "reference": "1368f4a58c3c52114b86b1abe8f4098869cb0079"
+                "reference": "ba05f990e79cbe69b9f35c8c1ac8dca7eecc3a10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPCSStandards/PHP_CodeSniffer/zipball/1368f4a58c3c52114b86b1abe8f4098869cb0079",
-                "reference": "1368f4a58c3c52114b86b1abe8f4098869cb0079",
+                "url": "https://api.github.com/repos/PHPCSStandards/PHP_CodeSniffer/zipball/ba05f990e79cbe69b9f35c8c1ac8dca7eecc3a10",
+                "reference": "ba05f990e79cbe69b9f35c8c1ac8dca7eecc3a10",
                 "shasum": ""
             },
             "require": {
@@ -14132,9 +14132,13 @@
                 {
                     "url": "https://opencollective.com/php_codesniffer",
                     "type": "open_collective"
+                },
+                {
+                    "url": "https://thanks.dev/phpcsstandards",
+                    "type": "thanks_dev"
                 }
             ],
-            "time": "2024-12-11T16:04:26+00:00"
+            "time": "2025-01-23T17:04:15+00:00"
         },
         {
             "name": "symfony/browser-kit",
