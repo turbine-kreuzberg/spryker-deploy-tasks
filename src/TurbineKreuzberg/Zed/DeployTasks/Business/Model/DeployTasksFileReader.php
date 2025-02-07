@@ -44,7 +44,7 @@ class DeployTasksFileReader
     /**
      * @param string $filePath
      *
-     * @return array<string, array<string, string|array<string>>>
+     * @return array<string, array<int, array<string, string|array<string>>>>
      */
     public function readTasksFromFile(string $filePath): array
     {

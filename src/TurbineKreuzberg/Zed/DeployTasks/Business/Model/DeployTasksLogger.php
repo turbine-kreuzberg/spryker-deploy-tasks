@@ -15,7 +15,7 @@ class DeployTasksLogger
     }
 
     /**
-     * @SuppressWarnings(PHPMD.BooleanArgumentFlag)
+     * @SuppressWarnings("PHPMD.BooleanArgumentFlag")
      *
      * @param string $message
      * @param bool $addDateTime

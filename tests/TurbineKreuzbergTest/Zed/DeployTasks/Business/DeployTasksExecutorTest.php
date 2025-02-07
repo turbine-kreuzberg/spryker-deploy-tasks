@@ -29,7 +29,7 @@ class DeployTasksExecutorTest extends Unit
     /**
      * @dataProvider tasksToExecuteDataProvider
      *
-     * @param array $task
+     * @param array<string, string|array<string>> $task
      * @param bool $expectedResult
      * @param string|null $expectedOutput
      *
@@ -64,7 +64,7 @@ class DeployTasksExecutorTest extends Unit
     }
 
     /**
-     * @return array
+     * @return array<string, array<string, mixed>>
      */
     public function tasksToExecuteDataProvider(): array
     {

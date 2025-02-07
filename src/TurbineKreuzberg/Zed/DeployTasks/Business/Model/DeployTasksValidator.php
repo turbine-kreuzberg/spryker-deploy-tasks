@@ -13,9 +13,9 @@ use TurbineKreuzberg\Zed\DeployTasks\Business\Exception\TaskMandatoryKeyMissingE
 class DeployTasksValidator
 {
     /**
-     * @param array $tasks
+     * @param array<string, array<int, array<string, string|array<string>>>> $tasks
      *
-     * @return array
+     * @return array<string, array<int, array<string, string|array<string>>>>
      */
     public function validate(array $tasks): array
     {
@@ -26,7 +26,7 @@ class DeployTasksValidator
     }
 
     /**
-     * @param array $tasks
+     * @param array<string, array<int, array<string, string|array<string>>>> $tasks
      *
      * @throws \TurbineKreuzberg\Zed\DeployTasks\Business\Exception\NoTasksKeyException
      * @throws \TurbineKreuzberg\Zed\DeployTasks\Business\Exception\NoTasksArrayException
@@ -45,7 +45,7 @@ class DeployTasksValidator
     }
 
     /**
-     * @param array $tasks
+     * @param array<int, array<string, string|array<string>>> $tasks
      *
      * @throws \TurbineKreuzberg\Zed\DeployTasks\Business\Exception\TaskCommandNotAStringException
      * @throws \TurbineKreuzberg\Zed\DeployTasks\Business\Exception\TaskExecuteOnNotAnArrayException
@@ -91,7 +91,7 @@ class DeployTasksValidator
     }
 
     /**
-     * @param array $task
+     * @param array<string, string|array<string>> $task
      * @param int $taskNumber
      *
      * @throws \TurbineKreuzberg\Zed\DeployTasks\Business\Exception\TaskMandatoryKeyMissingException

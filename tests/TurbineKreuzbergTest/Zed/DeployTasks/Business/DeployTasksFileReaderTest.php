@@ -52,7 +52,6 @@ class DeployTasksFileReaderTest extends Unit
         codecept_debug(compact('filesToExecute'));
 
         $countAllFiles = 4;
-        self::assertIsArray($filesToExecute);
         self::assertCount($countAllFiles, $filesToExecute);
 
         $firstVersionExecuted = 123456789;
@@ -92,7 +91,6 @@ class DeployTasksFileReaderTest extends Unit
         $previousVersion = null;
 
         foreach ($versions as $version) {
-            self::assertIsInt($version);
             self::assertGreaterThan(0, $version);
 
             // @phpstan-ignore-next-line

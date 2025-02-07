@@ -45,7 +45,9 @@ class DeployTasksExecutor
             return true;
         }
 
-        /** @var string $command */
+        /**
+         * @var string $command
+         */
         $command = $task[DeployTasksConstants::YAML_KEY_COMMAND];
 
         $this->tasksLogger->writeOutput(sprintf('Execute: %s', $command));
@@ -87,23 +89,31 @@ class DeployTasksExecutor
     }
 
     /**
-     * @param array $task
+     * @param array<string, string|array<string>> $task
      *
      * @return bool
      */
     private function isExecutionSkippedForCurrentStore(array $task): bool
     {
-        $storeToExecuteFor = $task[DeployTasksConstants::YAML_KEY_EXECUTE_FOR_STORE];
+        /**
+         * @var array<string> $storesToExecuteFor
+         */
+        $storesToExecuteFor = $task[DeployTasksConstants::YAML_KEY_EXECUTE_FOR_STORE];
         $currentStore = getenv('APPLICATION_STORE');
 
-        if (in_array($currentStore, $storeToExecuteFor, true)) {
+        if (in_array($currentStore, $storesToExecuteFor, true)) {
             return false;
         }
+
+        /**
+         * @var string $command
+         */
+        $command = $task[DeployTasksConstants::YAML_KEY_COMMAND];
 
         $this->tasksLogger->writeOutput(
             sprintf(
                 "Command '%s' will be skipped for store '%s'",
-                $task[DeployTasksConstants::YAML_KEY_COMMAND],
+                $command,
                 $currentStore,
             ),
         );
@@ -112,12 +122,15 @@ class DeployTasksExecutor
     }
 
     /**
-     * @param array $task
+     * @param array<string, string|array<string>> $task
      *
      * @return bool
      */
     private function isExecutionSkippedInCurrentEnvironment(array $task): bool
     {
+        /**
+         * @var array<string> $environmentsToExecuteOn
+         */
         $environmentsToExecuteOn = $task[DeployTasksConstants::YAML_KEY_EXECUTE_ON];
         $currentEnvironment = getenv('SHOP_ENV');
 
@@ -125,10 +138,15 @@ class DeployTasksExecutor
             return false;
         }
 
+        /**
+         * @var string $command
+         */
+        $command = $task[DeployTasksConstants::YAML_KEY_COMMAND];
+
         $this->tasksLogger->writeOutput(
             sprintf(
                 "Command '%s' will be skipped in env '%s'",
-                $task[DeployTasksConstants::YAML_KEY_COMMAND],
+                $command,
                 $currentEnvironment,
             ),
         );

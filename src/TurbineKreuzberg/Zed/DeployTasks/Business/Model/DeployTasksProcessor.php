@@ -74,9 +74,12 @@ class DeployTasksProcessor
             $this->tasksLogger->printSeparatorLine();
 
             $tasks = $this->tasksFileReader->readTasksFromFile($taskFile);
-            $validatedTasks = $this->tasksValidator->validate($tasks);
+            $validatedTasksArray = $this->tasksValidator->validate($tasks);
 
-            if ($this->executeTasks($validatedTasks[DeployTasksConstants::YAML_KEY_TASKS])) {
+            /** @var array<int, array<string, string|array<string>>> $validatedTasks */
+            $validatedTasks = $validatedTasksArray[DeployTasksConstants::YAML_KEY_TASKS];
+
+            if ($this->executeTasks($validatedTasks)) {
                 $this->tasksVersionJournal->saveExecutedVersion((int)$timestamp);
             }
         }
@@ -85,7 +88,7 @@ class DeployTasksProcessor
     }
 
     /**
-     * @param array $tasks
+     * @param array<int, array<string, string|array<string>>> $tasks
      *
      * @return bool
      */
