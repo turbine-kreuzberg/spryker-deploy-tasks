@@ -22,7 +22,7 @@ class DeployTasksVersionJournal
     }
 
     /**
-     * @return array
+     * @return array<string>
      */
     public function getExecutedVersions(): array
     {

@@ -20,7 +20,7 @@ parameters:
         - '%rootDir%/../../../tests/TurbineKreuzbergTest/Zed/DeployTasks/_output/*'
         - '%rootDir%/../../../tests/TurbineKreuzbergTest/Zed/DeployTasks/_support/_generated/*'
 
-    checkMissingIterableValueType: false
+    treatPhpDocTypesAsCertain: false
 
     reportUnmatchedIgnoredErrors: false
 

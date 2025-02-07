@@ -50,7 +50,7 @@ class PropelInstallHelper extends Module
     }
 
     /**
-     * @return array
+     * @return array<string>
      */
     private function getCommands(): array
     {
