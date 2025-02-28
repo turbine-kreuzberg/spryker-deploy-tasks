@@ -12974,20 +12974,21 @@
         },
         {
             "name": "spryker/code-sniffer",
-            "version": "0.17.27",
+            "version": "0.17.28",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker/code-sniffer.git",
-                "reference": "3ed9c1a30d6d856c60a19e74fab92bf166759c8f"
+                "reference": "3aaaf87343712bdc881ab8b1e6f1a62e9a1a619e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker/code-sniffer/zipball/3ed9c1a30d6d856c60a19e74fab92bf166759c8f",
-                "reference": "3ed9c1a30d6d856c60a19e74fab92bf166759c8f",
+                "url": "https://api.github.com/repos/spryker/code-sniffer/zipball/3aaaf87343712bdc881ab8b1e6f1a62e9a1a619e",
+                "reference": "3aaaf87343712bdc881ab8b1e6f1a62e9a1a619e",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.1",
+                "phpstan/phpdoc-parser": "^1.33.0",
                 "slevomat/coding-standard": "^7.2.0 || ^8.0.1",
                 "squizlabs/php_codesniffer": "^3.6.2"
             },
@@ -13028,7 +13029,7 @@
                 "issues": "https://github.com/spryker/code-sniffer/issues",
                 "source": "https://github.com/spryker/code-sniffer"
             },
-            "time": "2025-02-05T13:04:38+00:00"
+            "time": "2025-02-25T15:24:08+00:00"
         },
         {
             "name": "spryker/currency",
