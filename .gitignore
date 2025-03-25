@@ -8,3 +8,4 @@ tests/src/Orm
 tests/**/_generated/*
 .phpunit.result.cache
 .phpunit.cache
+composer.lock
