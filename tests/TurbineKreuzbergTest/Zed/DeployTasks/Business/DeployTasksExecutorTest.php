@@ -43,12 +43,12 @@ class DeployTasksExecutorTest extends Unit
         $result = $this->createDeployTasksExecutor()->execute($task);
 
         codecept_debug($task);
-        codecept_debug($this->getActualOutput());
+        codecept_debug($this->getActualOutputForAssertion());
 
         self::assertEquals($expectedResult, $result);
 
         if ($expectedOutput !== null) {
-            self::assertStringContainsString($expectedOutput, $this->getActualOutput());
+            self::assertStringContainsString($expectedOutput, $this->getActualOutputForAssertion());
         }
     }
 
