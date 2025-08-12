@@ -1,4 +1,3 @@
-version: '3'
 services:
   php:
     image: spryker/php:8.3
