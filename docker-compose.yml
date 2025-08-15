@@ -1,6 +1,6 @@
 services:
   php:
-    image: spryker/php:8.3
+    image: spryker/php:8.4
     working_dir: /data
     volumes:
       - ./:/data
